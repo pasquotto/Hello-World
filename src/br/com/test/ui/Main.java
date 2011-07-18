@@ -25,7 +25,7 @@ public class Main extends JFrame {
 		c.add(createLabel());
 		c.add(createJTextField());
 		
-		
+		System.out.println("test");
 		
 		open();
 	}
