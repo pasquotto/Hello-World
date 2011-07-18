@@ -26,7 +26,7 @@ public class Main extends JFrame {
 		c.add(createJTextField());
 		
 		System.out.println("test");
-		
+		System.out.println("test2");
 		open();
 	}
 
