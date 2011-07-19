@@ -15,21 +15,10 @@ public class Main extends JFrame {
 
 	public Main() {
 		Container c = getFlowContainer();
-		c.add(createLabel());
-		c.add(createJTextField());
+		c.add(new JLabelExtension("texto do JLabel"));
+		c.add(new JTextFieldExtension("Texto do JTextField"));
 
-		open();
-	}
-
-	private JComponent createLabel() {
-		JComponent lbl = new JLabelExtension("texto do JLabel");
-
-		return lbl;
-	}
-
-	private JTextField createJTextField() {
-		JTextField jt = new JTextFieldExtension("Texto do JTextField");
-		return jt;
+		this.open();
 	}
 
 	private Container getFlowContainer() {
