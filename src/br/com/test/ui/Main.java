@@ -2,9 +2,6 @@ package br.com.test.ui;
 
 import java.awt.Container;
 import java.awt.FlowLayout;
-import java.awt.font.TextAttribute;
-import java.util.HashMap;
-import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -14,20 +11,13 @@ import javax.swing.JTextField;
 
 public class Main extends JFrame {
 
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = -7265255258335314486L;
 
 	public Main() {
-
 		Container c = getFlowContainer();
-
 		c.add(createLabel());
 		c.add(createJTextField());
 
-		System.out.println("test");
-		System.out.println("test2");
 		open();
 	}
 
@@ -38,19 +28,7 @@ public class Main extends JFrame {
 	}
 
 	private JTextField createJTextField() {
-		JTextField jt = new JTextField("Texto do JTextField") {
-			{
-				this.setOpaque(false);
-				this.setBorder(null);
-				this.setEditable(false);
-				// jt.setMinimumSize(new java.awt.Dimension(200, 24));
-				// jt.setPreferredSize(new java.awt.Dimension(270, 24));
-				Map<TextAttribute, Object> attributes = new HashMap<TextAttribute, Object>();
-				attributes.put(TextAttribute.UNDERLINE,
-						TextAttribute.UNDERLINE_ON);
-				this.setFont(this.getFont().deriveFont(attributes));
-			}
-		};
+		JTextField jt = new JTextFieldExtension("Texto do JTextField");
 		return jt;
 	}
 
