@@ -10,23 +10,9 @@ import java.util.regex.Pattern;
 
 import javax.swing.JComponent;
 import javax.swing.JFrame;
-import javax.swing.JLabel;
 import javax.swing.JTextField;
 
 public class Main extends JFrame {
-
-	private final class JLabelExtension extends JLabel {
-		private static final long serialVersionUID = -5175562297033400074L;
-
-		private JLabelExtension(String text) {
-			super(text);
-			this.setOpaque(false);
-			this.setBorder(null);
-			Map<TextAttribute, Object> attributes = new HashMap<TextAttribute, Object>();
-			attributes.put(TextAttribute.UNDERLINE, TextAttribute.UNDERLINE_ON);
-			this.setFont(this.getFont().deriveFont(attributes));
-		}
-	}
 
 	/**
 	 * 
