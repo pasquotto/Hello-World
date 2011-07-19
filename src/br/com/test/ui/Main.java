@@ -5,10 +5,11 @@ import java.awt.FlowLayout;
 import java.awt.font.TextAttribute;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import javax.swing.JComponent;
 import javax.swing.JFrame;
-import javax.swing.JLabel;
 import javax.swing.JTextField;
 
 public class Main extends JFrame {
@@ -31,18 +32,14 @@ public class Main extends JFrame {
 	}
 
 	private JComponent createLabel() {
-		JComponent lbl = new JLabel("texto do JLabel");
-		lbl.setOpaque(false);
-		lbl.setBorder(null);
-		Map<TextAttribute, Object> attributes = new HashMap<TextAttribute, Object>();
-		attributes.put(TextAttribute.UNDERLINE, TextAttribute.UNDERLINE_ON);
-		lbl.setFont(lbl.getFont().deriveFont(attributes));
-		//lbl.setEditable(false);
+		JComponent lbl = new JLabelExtension("texto do JLabel");
+		
+		
 		return lbl;
 	}
 
 	private JTextField createJTextField() {
-		JTextField jt = new JTextField("xxx");
+		JTextField jt = new JTextField("Texto do JTextField");
 		jt.setOpaque(false);
 		jt.setBorder(null);
 		jt.setEditable(false);
@@ -68,7 +65,7 @@ public class Main extends JFrame {
 	}
 	
 	public static void main(String[] args) {
-		new Main();
+		new Main();	
 	}
 	
 }
