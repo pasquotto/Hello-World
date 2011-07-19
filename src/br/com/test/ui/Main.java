@@ -19,7 +19,7 @@ public class Main extends JFrame {
 	 */
 	private static final long serialVersionUID = -7265255258335314486L;
 
-	public Main() {
+	public Main(String tittle) {
 		
 		Container c = getFlowContainer();
 		
@@ -28,7 +28,7 @@ public class Main extends JFrame {
 		
 		System.out.println("test");
 		System.out.println("test2");
-		open();
+		open(tittle);
 	}
 
 	private JComponent createLabel() {
@@ -58,14 +58,15 @@ public class Main extends JFrame {
 		return c;
 	}
 
-	private void open() {
+	private void open(String tittle) {
+		this.setTitle(tittle);
 		this.setSize(300, 300);
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		this.setVisible(true);
 	}
 	
 	public static void main(String[] args) {
-		new Main();	
+		new Main("Window tittle");	
 	}
 	
 }
